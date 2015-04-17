@@ -1,8 +1,9 @@
 class CreateActors < ActiveRecord::Migration
   def change
     create_table :actors do |t|
-
-      t.timestamps null: false
+    	t.string :name
+    	t.text :photo_url
+      	t.timestamps null: false
     end
   end
 end

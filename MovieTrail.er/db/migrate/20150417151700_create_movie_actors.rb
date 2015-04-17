@@ -1,8 +1,9 @@
 class CreateMovieActors < ActiveRecord::Migration
   def change
-    create_table :movie_actors do |t|
-
-      t.timestamps null: false
+    create_table :movies_actors do |t|
+    	t.belongs_to :movie 
+    	t.belongs_to :actor 
+        t.timestamps null: false
     end
   end
 end
